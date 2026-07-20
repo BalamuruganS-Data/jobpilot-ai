@@ -63,3 +63,24 @@ AI
 Local-first using Ollama whenever possible.
 
 Cloud LLMs can be added later.
+
+## Decision 006
+
+Date: 2026-07-20
+
+### Decision
+
+The project will follow an Agile sprint-based development process.
+
+### Reason
+
+Large AI systems are easier to build, review, test, and maintain when work is delivered in small iterations.
+
+Every sprint must include:
+
+- Planning
+- Implementation
+- Testing
+- Documentation
+- Git commit
+- Sprint review
