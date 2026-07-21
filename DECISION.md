@@ -84,3 +84,17 @@ Every sprint must include:
 - Documentation
 - Git commit
 - Sprint review
+
+## Decision 007
+
+Date: 2026-07-21
+
+### Decision
+
+Adopt SQLAlchemy ORM with SQLite for the initial development phase.
+
+### Reason
+
+- Zero-cost setup
+- Easy local development
+- ORM allows switching to PostgreSQL later with minimal code changes.

@@ -92,3 +92,14 @@ https://github.com/BalamuruganS-Data/jobpilot-ai
 Sprint 1 completed successfully.
 
 Ready for Sprint 2.
+
+## [0.2.0] - 2026-07-21
+
+### Added
+- Centralized configuration using pydantic-settings
+- Structured logging
+- SQLAlchemy integration
+- SQLite database
+- Database session management
+- Job model
+- Automatic database initialization
