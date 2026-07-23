@@ -98,3 +98,99 @@ Adopt SQLAlchemy ORM with SQLite for the initial development phase.
 - Zero-cost setup
 - Easy local development
 - ORM allows switching to PostgreSQL later with minimal code changes.
+
+---
+
+# Sprint 2 Technical Decisions
+
+## Architecture
+
+We continue following a layered architecture.
+
+```
+API
+↓
+Services
+↓
+Database
+```
+
+Business logic must remain inside Services.
+
+Routes should only receive requests and return responses.
+
+---
+
+## Database
+
+Chosen Database:
+- SQLite
+
+Reason:
+- Zero configuration
+- Easy development
+- Easy migration to PostgreSQL later
+
+---
+
+## ORM
+
+Chosen ORM:
+- SQLAlchemy
+
+Reason:
+- Industry standard
+- Easy migration
+- Strong FastAPI integration
+
+---
+
+## API Design
+
+Versioning:
+```
+/api/v1
+```
+
+Reason:
+Supports future API versions without breaking existing clients.
+
+---
+
+## Documentation
+
+Swagger UI remains enabled throughout development.
+
+Reason:
+- Faster testing
+- Easier debugging
+- Automatic API documentation
+
+---
+
+## ATS Engine
+
+Current Version:
+Rule-based scoring.
+
+Future Version:
+LLM-assisted semantic scoring using AI.
+
+Reason:
+Rule-based implementation provides a deterministic MVP while AI can be integrated later without changing the API contract.
+
+---
+
+## Current Project Status
+
+Sprint 1
+- ✅ Project Setup
+
+Sprint 2
+- ✅ Backend Foundation
+- ✅ Database
+- ✅ Jobs CRUD
+- ✅ Resume Upload API
+- ✅ ATS API
+- ⏳ Intelligent ATS scoring
+- ⏳ Resume Parsing

@@ -103,3 +103,39 @@ Ready for Sprint 2.
 - Database session management
 - Job model
 - Automatic database initialization
+
+# Changelog
+
+All notable changes to JobPilot AI are documented here.
+
+---
+
+## Sprint 2 - Backend Foundation & ATS API (2026-07-23)
+
+### Added
+
+- Centralized application configuration using Pydantic Settings
+- Environment variable support (.env)
+- Structured logging across the application
+- SQLite database integration
+- SQLAlchemy ORM setup
+- Automatic database initialization during application startup
+- Job model and Resume model
+- Jobs CRUD API
+- Resume Upload API
+- ATS Scoring API
+- Swagger/OpenAPI documentation
+- Clean project architecture (API, Services, Models, Schemas)
+
+### Improved
+
+- Startup lifecycle using FastAPI lifespan
+- Database initialization process
+- Project folder organization
+- API versioning (/api/v1)
+
+### Fixed
+
+- Circular import issue between Base and Job model
+- Uvicorn module loading issue
+- Router registration issues preventing ATS endpoint from appearing

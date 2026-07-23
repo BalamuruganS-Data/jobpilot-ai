@@ -13,8 +13,6 @@ router = APIRouter(
 def score_resume(request: ATSScoreRequest):
     service = ATSService()
 
-    score = service.calculate_score(request)
+    result = service.calculate_score(request)
 
-    return ATSScoreResponse(
-        ats_score=score
-    )
+    return ATSScoreResponse(**result)
