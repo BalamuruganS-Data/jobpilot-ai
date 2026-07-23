@@ -1,8 +1,8 @@
 from app.core.logger import setup_logger
 from app.database.database import Base, engine
 
-# Import models so SQLAlchemy registers them
-from app.models.job import Job
+# Import ALL models
+from app.database import base
 
 logger = setup_logger(__name__)
 

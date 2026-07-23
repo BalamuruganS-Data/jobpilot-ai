@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from app.core.config import settings
 from app.core.logger import setup_logger
 from app.database.init_db import init_db
+from app.api.routes.v1 import router as api_v1_router
 
 logger = setup_logger(__name__)
 
@@ -21,6 +22,10 @@ app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
     lifespan=lifespan,
+)
+app.include_router(
+    api_v1_router,
+    prefix="/api/v1",
 )
 
 
